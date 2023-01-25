@@ -6,7 +6,7 @@
     <atom:link href="https://feed.podbean.com/missiontopluto/feed.xml" rel="self" type="application/rss+xml"/>
     <link>https://missiontopluto.podbean.com</link>
     <description>"เพราะทุกความสงสัยทำให้เกิดการเรียนรู้" ร่วมกันเปิดกล่องแพนโดรา ไขปริศนาจักรวาล เรียนรู้ผ่านเรื่องราวที่สนุกและมีสาระ ณ มุมมืดของสุดขอบกาแล็กซี กับ Mission To Pluto Mystery Club by Mission To The Moon Media</description>
-    <pubDate>Tue, 10 Jan 2023 18:00:00 +0700</pubDate>
+    <pubDate>Tue, 24 Jan 2023 18:00:00 +0700</pubDate>
     <generator>https://podbean.com/?v=5.5</generator>
     <language>th</language>
     <spotify:countryOfOrigin>th</spotify:countryOfOrigin>
@@ -28,6 +28,24 @@
       <width>144</width>
       <height>144</height>
     </image>
+    <item>
+      <title>Kotori Bako กล่องกลปริศนา ถ้าไม่อยากตาย อย่าไข! | Time To Play EP.118</title>
+      <link>https://missiontopluto.podbean.com/e/time-to-play-kotoribako/</link>
+      <pubDate>Mon, 23 Jan 2023 18:00:00 +0700</pubDate>
+      <guid isPermaLink="false">missiontopluto.podbean.com/1857c058-0ae2-31de-b766-733aabe3a994</guid>
+      <enclosure url="https://mcdn.podbean.com/mf/web/6cv4g7/TP118.mp3" length="16878352" type="audio/mpeg"/>
+      <itunes:author>Mission To Pluto Media</itunes:author>
+      <itunes:duration>20:05</itunes:duration>
+    </item>
+    <item>
+      <title>"เสียงอะไรในกำแพง..." The Rats in the Wall โดย H. P. Lovecraft | Time To Play EP.117</title>
+      <link>https://missiontopluto.podbean.com/e/time-to-play-the-rats-in-the-wall/</link>
+      <pubDate>Mon, 16 Jan 2023 18:00:00 +0700</pubDate>
+      <guid isPermaLink="false">missiontopluto.podbean.com/b79b1142-12a1-31aa-82f0-246bd8d593ba</guid>
+      <enclosure url="https://mcdn.podbean.com/mf/web/kwmqus/TP117.mp3" length="29257936" type="audio/mpeg"/>
+      <itunes:author>Mission To Pluto Media</itunes:author>
+      <itunes:duration>34:49</itunes:duration>
+    </item>
     <item>
       <title>ตำนานสุสานใต้ดินกรุงปารีส อุโมงค์ฝังโครงกระดูกนับล้าน | Time To Play EP.116</title>
       <link>https://missiontopluto.podbean.com/e/time-to-play-catacombs-of-paris/</link>
@@ -1116,42 +1134,6 @@
       <enclosure url="https://mcdn.podbean.com/mf/web/tcx6zp/SJ51.mp3" length="10610176" type="audio/mpeg"/>
       <itunes:author>Mission To Pluto Media</itunes:author>
       <itunes:duration>12:37</itunes:duration>
-    </item>
-    <item>
-      <title>H.P. Lovecraft "Dagon &amp; The Deep One" มหันตภัยจากห้วงทะเลลึก | Time to Play EP.51 Special</title>
-      <link>https://missiontopluto.podbean.com/e/hplovecraft-dagon-and-the-deep-one/</link>
-      <pubDate>Mon, 13 Sep 2021 18:00:00 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/8a333f91-32d9-3a47-b444-c6949927746d</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/pxabu3/TP51_6kl7y.mp3" length="36858223" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>43:52</itunes:duration>
-    </item>
-    <item>
-      <title>Show Time EP.54 | Cruella เกิดมาขบถ</title>
-      <link>https://missiontopluto.podbean.com/e/cruella/</link>
-      <pubDate>Sat, 11 Sep 2021 18:00:00 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/cc76a9a2-bb7f-335a-b67b-25eebbecff68</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/t7s796/ST54.mp3" length="14843200" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>17:39</itunes:duration>
-    </item>
-    <item>
-      <title>Sport Journey EP.50 | หายนะแมนยูเครื่องบินตก ตายเกือบยกทีม</title>
-      <link>https://missiontopluto.podbean.com/e/sj_ep50/</link>
-      <pubDate>Wed, 08 Sep 2021 18:00:00 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/3433ec11-a8e3-3c81-bf7c-a9d9a68a0211</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/t38w25/SJ50_Podcast_87t4l.mp3" length="13109102" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>15:36</itunes:duration>
-    </item>
-    <item>
-      <title>Time to Play EP.50 | 10 Pokemon สยอง ต้องหนี</title>
-      <link>https://missiontopluto.podbean.com/e/10_pokemon_scary/</link>
-      <pubDate>Mon, 06 Sep 2021 18:09:41 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/598952bf-555f-383d-9cc1-2fcd74c9807e</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/9sb8qe/TP50_8h879.mp3" length="15349102" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>18:16</itunes:duration>
     </item>
   </channel>
 </rss>
