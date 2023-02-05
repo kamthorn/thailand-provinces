@@ -6,7 +6,7 @@
     <atom:link href="https://feed.podbean.com/missiontopluto/feed.xml" rel="self" type="application/rss+xml"/>
     <link>https://missiontopluto.podbean.com</link>
     <description>"เพราะทุกความสงสัยทำให้เกิดการเรียนรู้" ร่วมกันเปิดกล่องแพนโดรา ไขปริศนาจักรวาล เรียนรู้ผ่านเรื่องราวที่สนุกและมีสาระ ณ มุมมืดของสุดขอบกาแล็กซี กับ Mission To Pluto Mystery Club by Mission To The Moon Media</description>
-    <pubDate>Tue, 24 Jan 2023 18:00:00 +0700</pubDate>
+    <pubDate>Tue, 31 Jan 2023 18:00:00 +0700</pubDate>
     <generator>https://podbean.com/?v=5.5</generator>
     <language>th</language>
     <spotify:countryOfOrigin>th</spotify:countryOfOrigin>
@@ -28,6 +28,15 @@
       <width>144</width>
       <height>144</height>
     </image>
+    <item>
+      <title>"GHROTH" ดาวมรณะ ที่สร้าง "ความหายนะ" ให้กับมวลมนุษยชาติ | Time To Play EP.119</title>
+      <link>https://missiontopluto.podbean.com/e/time-to-play-ghroth-the-death-planet/</link>
+      <pubDate>Mon, 30 Jan 2023 18:00:00 +0700</pubDate>
+      <guid isPermaLink="false">missiontopluto.podbean.com/a9873417-8804-3d96-a54e-efc7dff8a76c</guid>
+      <enclosure url="https://mcdn.podbean.com/mf/web/ypjjjn/TP119.mp3" length="20696992" type="audio/mpeg"/>
+      <itunes:author>Mission To Pluto Media</itunes:author>
+      <itunes:duration>24:38</itunes:duration>
+    </item>
     <item>
       <title>Kotori Bako กล่องกลปริศนา ถ้าไม่อยากตาย อย่าไข! | Time To Play EP.118</title>
       <link>https://missiontopluto.podbean.com/e/time-to-play-kotoribako/</link>
@@ -1071,69 +1080,6 @@
       <enclosure url="https://mcdn.podbean.com/mf/web/z84dqp/ST57.mp3" length="12422992" type="audio/mpeg"/>
       <itunes:author>Mission To Pluto Media</itunes:author>
       <itunes:duration>14:47</itunes:duration>
-    </item>
-    <item>
-      <title>Sport Journey EP.53 | Emma Raducanu มู่หลานแห่งอังกฤษ ผู้ทะยานคว้าแชมป์ US Open</title>
-      <link>https://missiontopluto.podbean.com/e/emma_raducanu/</link>
-      <pubDate>Wed, 29 Sep 2021 18:00:00 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/8ac1820b-d7d1-3fa0-9e3a-24f74502ddb9</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/kejmge/SJ53.mp3" length="10078048" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>11:59</itunes:duration>
-    </item>
-    <item>
-      <title>Apocalypse Trilogy หนังที่ขึ้นชื่อว่ามีความ H.P. Lovecraft ที่สุด | Time to Play EP.53 Special</title>
-      <link>https://missiontopluto.podbean.com/e/hplovecraft-apocalypse-trilogy/</link>
-      <pubDate>Mon, 27 Sep 2021 18:00:00 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/0459e1a2-4e39-3cfa-b5b1-4c849d3dab70</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/v4wxx3/TP53.mp3" length="38844051" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>46:14</itunes:duration>
-    </item>
-    <item>
-      <title>Show Time EP.56 | Eternal Sunshine of the Spotless Mind ลบไม่ช่วยให้ลืม</title>
-      <link>https://missiontopluto.podbean.com/e/eternal_sunshine_of_the_spotless_mind/</link>
-      <pubDate>Sat, 25 Sep 2021 18:00:00 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/f0c030b2-3efe-39ff-9f4f-80bcee23fb24</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/87sfie/ST56.mp3" length="19071088" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>22:41</itunes:duration>
-    </item>
-    <item>
-      <title>Sport Journey EP.52 | ทำไมตาลีบันถึงออกกฎห้ามผู้หญิงเล่นกีฬา</title>
-      <link>https://missiontopluto.podbean.com/e/taliban_issue_a_rule_prohibiting_women_from_playing_sports/</link>
-      <pubDate>Wed, 22 Sep 2021 18:00:00 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/8d2affe5-d0f3-3c2f-9ab9-3e962b20c524</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/tewgtd/SJ52.mp3" length="12842862" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>15:17</itunes:duration>
-    </item>
-    <item>
-      <title>Time to Play EP.52 Multiverse | God of War การเดินทางของโล้นเทพซ่า สู่ป๊ะป๋าเลี้ยงเดี่ยว</title>
-      <link>https://missiontopluto.podbean.com/e/god_of_war/</link>
-      <pubDate>Mon, 20 Sep 2021 18:00:00 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/be84ba09-645b-33fc-bf1e-d31648a3e336</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/kts855/TP52_751si.mp3" length="42963092" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>51:08</itunes:duration>
-    </item>
-    <item>
-      <title>Show Time EP.55 Multiverse | Million Dollar Baby กำปั้นสาวสู้สุดใจ กับพลุไฟแห่งความฝัน</title>
-      <link>https://missiontopluto.podbean.com/e/million_dollar_baby/</link>
-      <pubDate>Sat, 18 Sep 2021 18:00:00 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/6aafe0ef-0953-36a5-b994-24bff5aa6ff5</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/ai93tu/ST55.mp3" length="31112851" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>37:02</itunes:duration>
-    </item>
-    <item>
-      <title>Sport Journey EP.51 | นักปิงปองอียิปต์ไร้แขน กับชีวิตสุดมหัศจรรย์</title>
-      <link>https://missiontopluto.podbean.com/e/ibrahim_hamadtou/</link>
-      <pubDate>Wed, 15 Sep 2021 18:00:00 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/38f4f488-84b1-3574-aa86-b46316a42c2e</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/tcx6zp/SJ51.mp3" length="10610176" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>12:37</itunes:duration>
     </item>
   </channel>
 </rss>
