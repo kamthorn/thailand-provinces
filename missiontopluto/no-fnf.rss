@@ -6,7 +6,7 @@
     <atom:link href="https://feed.podbean.com/missiontopluto/feed.xml" rel="self" type="application/rss+xml"/>
     <link>https://missiontopluto.podbean.com</link>
     <description>"เพราะทุกความสงสัยทำให้เกิดการเรียนรู้" ร่วมกันเปิดกล่องแพนโดรา ไขปริศนาจักรวาล เรียนรู้ผ่านเรื่องราวที่สนุกและมีสาระ ณ มุมมืดของสุดขอบกาแล็กซี กับ Mission To Pluto Mystery Club by Mission To The Moon Media</description>
-    <pubDate>Tue, 21 Feb 2023 18:00:00 +0700</pubDate>
+    <pubDate>Tue, 28 Feb 2023 19:38:20 +0700</pubDate>
     <generator>https://podbean.com/?v=5.5</generator>
     <language>th</language>
     <spotify:countryOfOrigin>th</spotify:countryOfOrigin>
@@ -28,6 +28,15 @@
       <width>144</width>
       <height>144</height>
     </image>
+    <item>
+      <title>Cthugha เทวาแห่งอัคคีในจักรวาล H.P. Lovecraft  | Time To Play EP.123</title>
+      <link>https://missiontopluto.podbean.com/e/cthugha-%e0%b9%80%e0%b8%97%e0%b8%a7%e0%b8%b2%e0%b9%81%e0%b8%ab%e0%b9%88%e0%b8%87%e0%b8%ad%e0%b8%b1%e0%b8%84%e0%b8%84/</link>
+      <pubDate>Mon, 27 Feb 2023 20:25:13 +0700</pubDate>
+      <guid isPermaLink="false">missiontopluto.podbean.com/21fc8333-24fc-34ef-a7f8-c7e9d6c36e0c</guid>
+      <enclosure url="https://mcdn.podbean.com/mf/web/fjh9s2/TP123.mp3" length="19282096" type="audio/mpeg"/>
+      <itunes:author>Mission To Pluto Media</itunes:author>
+      <itunes:duration>22:57</itunes:duration>
+    </item>
     <item>
       <title>รู้จัก 5 ประเภทซอมบี้เชื้อราใน The Last of Us | Time To Play EP.122</title>
       <link>https://missiontopluto.podbean.com/e/time-to-play-5-types-of-mold-zombies/</link>
@@ -981,24 +990,6 @@
       <enclosure url="https://mcdn.podbean.com/mf/web/mv4sna/SJ58.mp3" length="13363639" type="audio/mpeg"/>
       <itunes:author>Mission To Pluto Media</itunes:author>
       <itunes:duration>15:54</itunes:duration>
-    </item>
-    <item>
-      <title>ขบวน 100 อสูรและเหล่าโยไค | Time to Play EP.58</title>
-      <link>https://missiontopluto.podbean.com/e/yokai-100-demon/</link>
-      <pubDate>Mon, 01 Nov 2021 18:00:00 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/340f0159-d09c-3b54-89be-e476617b0141</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/jpksfd/TP58.mp3" length="35670017" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>42:27</itunes:duration>
-    </item>
-    <item>
-      <title>Dune สงคราม การเมือง ศาสนา และทะเลทราย | Show Time EP.61</title>
-      <link>https://missiontopluto.podbean.com/e/dune%e0%b8%aa%e0%b8%87%e0%b8%84%e0%b8%a3%e0%b8%b2%e0%b8%a1-%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b9%80%e0%b8%a1%e0%b8%b7%e0%b8%ad%e0%b8%87-1635567848/</link>
-      <pubDate>Sat, 30 Oct 2021 18:00:00 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/bd3ae132-d796-3abb-a85b-5aef173a66cf</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/cjmwwf/ST61.mp3" length="46383520" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>55:12</itunes:duration>
     </item>
   </channel>
 </rss>
