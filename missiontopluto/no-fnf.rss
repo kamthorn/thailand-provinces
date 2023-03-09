@@ -6,7 +6,7 @@
     <atom:link href="https://feed.podbean.com/missiontopluto/feed.xml" rel="self" type="application/rss+xml"/>
     <link>https://missiontopluto.podbean.com</link>
     <description>"เพราะทุกความสงสัยทำให้เกิดการเรียนรู้" ร่วมกันเปิดกล่องแพนโดรา ไขปริศนาจักรวาล เรียนรู้ผ่านเรื่องราวที่สนุกและมีสาระ ณ มุมมืดของสุดขอบกาแล็กซี กับ Mission To Pluto Mystery Club by Mission To The Moon Media</description>
-    <pubDate>Tue, 28 Feb 2023 19:38:20 +0700</pubDate>
+    <pubDate>Tue, 07 Mar 2023 18:00:00 +0700</pubDate>
     <generator>https://podbean.com/?v=5.5</generator>
     <language>th</language>
     <spotify:countryOfOrigin>th</spotify:countryOfOrigin>
@@ -20,6 +20,7 @@
     <itunes:category text="Arts"/>
     <itunes:owner>
       <itunes:name>Mission To Pluto Media</itunes:name>
+      <itunes:email>info@missiontothemoon.co</itunes:email>
     </itunes:owner>
     <image>
       <url>https://deow9bq0xqvbj.cloudfront.net/image-logo/7085251/PLUTO2022_Display-3_3j7xup.jpg</url>
@@ -28,6 +29,15 @@
       <width>144</width>
       <height>144</height>
     </image>
+    <item>
+      <title>Madam Koi Koi ตำนานวิญญาณอาฆาตจากแอฟริกา | Time To Play EP.124</title>
+      <link>https://missiontopluto.podbean.com/e/madamkoikoi-%e0%b8%95%e0%b8%b3%e0%b8%99%e0%b8%b2%e0%b8%99%e0%b8%a7%e0%b8%b4%e0%b8%8d%e0%b8%8d%e0%b8%b2%e0%b8%93/</link>
+      <pubDate>Tue, 07 Mar 2023 18:00:00 +0700</pubDate>
+      <guid isPermaLink="false">missiontopluto.podbean.com/dd3630e9-58f3-3703-afe8-8e96c4b73e49</guid>
+      <enclosure url="https://mcdn.podbean.com/mf/web/akdnhu/TP124_9rxz2.mp3" length="12667936" type="audio/mpeg"/>
+      <itunes:author>Mission To Pluto Media</itunes:author>
+      <itunes:duration>15:04</itunes:duration>
+    </item>
     <item>
       <title>Cthugha เทวาแห่งอัคคีในจักรวาล H.P. Lovecraft  | Time To Play EP.123</title>
       <link>https://missiontopluto.podbean.com/e/cthugha-%e0%b9%80%e0%b8%97%e0%b8%a7%e0%b8%b2%e0%b9%81%e0%b8%ab%e0%b9%88%e0%b8%87%e0%b8%ad%e0%b8%b1%e0%b8%84%e0%b8%84/</link>
@@ -954,42 +964,6 @@
       <enclosure url="https://mcdn.podbean.com/mf/web/7f8hbm/ST63.mp3" length="24970576" type="audio/mpeg"/>
       <itunes:author>Mission To Pluto Media</itunes:author>
       <itunes:duration>29:43</itunes:duration>
-    </item>
-    <item>
-      <title>สรุปดราม่าวัคซีน 'Kyrie Irving' โดนแบนจากวงการบาส ห้ามเล่น ห้ามรับเงินเดือน! | Sport Journey EP.59</title>
-      <link>https://missiontopluto.podbean.com/e/%e0%b8%aa%e0%b8%a3%e0%b8%b8%e0%b8%9b%e0%b8%94%e0%b8%a3%e0%b8%b2%e0%b8%a1%e0%b9%88%e0%b8%b2%e0%b8%a7%e0%b8%b1%e0%b8%84%e0%b8%8b%e0%b8%b5%e0%b8%99-ky/</link>
-      <pubDate>Wed, 10 Nov 2021 18:14:15 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/ffd13579-237a-3078-ac54-7f04e296804d</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/2sz74n/SJ59.mp3" length="10319296" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>12:16</itunes:duration>
-    </item>
-    <item>
-      <title>จัดหมวดหมู่เทพของ H.P. Lovecraft | Time to Play EP.59 Special</title>
-      <link>https://missiontopluto.podbean.com/e/hplovecraft-catergory-of-deity/</link>
-      <pubDate>Mon, 08 Nov 2021 18:00:00 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/5abc7183-58f8-3d2a-b744-a8055ff36003</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/dztr3h/TP59.mp3" length="37731549" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>44:54</itunes:duration>
-    </item>
-    <item>
-      <title>ร่างทรง เขย่าทั้งศรัทธาและมาตรฐานวงการภาพยนตร์ไทย | Show Time EP.62</title>
-      <link>https://missiontopluto.podbean.com/e/%e0%b8%a3%e0%b9%88%e0%b8%b2%e0%b8%87%e0%b8%97%e0%b8%a3%e0%b8%87-%e0%b9%80%e0%b8%82%e0%b8%a2%e0%b9%88%e0%b8%b2%e0%b8%97%e0%b8%b1/</link>
-      <pubDate>Sat, 06 Nov 2021 18:00:00 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/82f6a620-85f9-3e2e-ab4c-d1f9f01c4711</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/adzzxm/ST62.mp3" length="21703312" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>25:49</itunes:duration>
-    </item>
-    <item>
-      <title>Patrice Evra ตำนานผีแดง ผู้โดนล่วงละเมิดทางเพศโดยคนที่เคยนับถือเป็นครู | Sport Journey EP.58</title>
-      <link>https://missiontopluto.podbean.com/e/patrice-evra-%e0%b8%95%e0%b8%b3%e0%b8%99%e0%b8%b2%e0%b8%99%e0%b8%9c%e0%b8%b5%e0%b9%81%e0%b8%94%e0%b8%87-%e0%b8%9c/</link>
-      <pubDate>Wed, 03 Nov 2021 18:00:00 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/47049c76-c483-3fc9-aad4-a1cb0e3c0ca2</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/mv4sna/SJ58.mp3" length="13363639" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>15:54</itunes:duration>
     </item>
   </channel>
 </rss>
