@@ -6,7 +6,7 @@
     <atom:link href="https://feed.podbean.com/missiontopluto/feed.xml" rel="self" type="application/rss+xml"/>
     <link>https://missiontopluto.podbean.com</link>
     <description>"เพราะทุกความสงสัยทำให้เกิดการเรียนรู้" ร่วมกันเปิดกล่องแพนโดรา ไขปริศนาจักรวาล เรียนรู้ผ่านเรื่องราวที่สนุกและมีสาระ ณ มุมมืดของสุดขอบกาแล็กซี กับ Mission To Pluto Mystery Club by Mission To The Moon Media</description>
-    <pubDate>Tue, 07 Mar 2023 18:00:00 +0700</pubDate>
+    <pubDate>Tue, 21 Mar 2023 18:00:00 +0700</pubDate>
     <generator>https://podbean.com/?v=5.5</generator>
     <language>th</language>
     <spotify:countryOfOrigin>th</spotify:countryOfOrigin>
@@ -20,7 +20,6 @@
     <itunes:category text="Arts"/>
     <itunes:owner>
       <itunes:name>Mission To Pluto Media</itunes:name>
-      <itunes:email>info@missiontothemoon.co</itunes:email>
     </itunes:owner>
     <image>
       <url>https://deow9bq0xqvbj.cloudfront.net/image-logo/7085251/PLUTO2022_Display-3_3j7xup.jpg</url>
@@ -29,6 +28,24 @@
       <width>144</width>
       <height>144</height>
     </image>
+    <item>
+      <title>ทฤษฎีสมคบคิดมนุษย์กิ้งก่า รัฐบาลเงาผู้ครองโลก | Time To Play EP.126</title>
+      <link>https://missiontopluto.podbean.com/e/%e0%b8%97%e0%b8%a4%e0%b8%a9%e0%b8%8e%e0%b8%b5%e0%b8%aa%e0%b8%a1%e0%b8%84%e0%b8%9a%e0%b8%84%e0%b8%b4%e0%b8%94%e0%b8%a1%e0%b8%99%e0%b8%b8/</link>
+      <pubDate>Mon, 20 Mar 2023 18:00:00 +0700</pubDate>
+      <guid isPermaLink="false">missiontopluto.podbean.com/efe7cff1-0731-36b5-bf91-3e97d95c8869</guid>
+      <enclosure url="https://mcdn.podbean.com/mf/web/rtt98q/TP126.mp3" length="17585296" type="audio/mpeg"/>
+      <itunes:author>Mission To Pluto Media</itunes:author>
+      <itunes:duration>20:55</itunes:duration>
+    </item>
+    <item>
+      <title>คืนสยองในพิพิธภัณฑ์หุ่นขี้ผึ้ง โดย H.P. Lovecraft | Time To Play EP.125</title>
+      <link>https://missiontopluto.podbean.com/e/%e0%b8%84%e0%b8%b7%e0%b8%99%e0%b8%aa%e0%b8%a2%e0%b8%ad%e0%b8%87%e0%b9%83%e0%b8%99%e0%b8%9e%e0%b8%b4%e0%b8%9e%e0%b8%b4%e0%b8%98%e0%b8%a0/</link>
+      <pubDate>Mon, 13 Mar 2023 18:00:00 +0700</pubDate>
+      <guid isPermaLink="false">missiontopluto.podbean.com/cc143ee7-7000-3fe0-b02a-824557e744a8</guid>
+      <enclosure url="https://mcdn.podbean.com/mf/web/a5t62t/TP125.mp3" length="25155040" type="audio/mpeg"/>
+      <itunes:author>Mission To Pluto Media</itunes:author>
+      <itunes:duration>29:56</itunes:duration>
+    </item>
     <item>
       <title>Madam Koi Koi ตำนานวิญญาณอาฆาตจากแอฟริกา | Time To Play EP.124</title>
       <link>https://missiontopluto.podbean.com/e/madamkoikoi-%e0%b8%95%e0%b8%b3%e0%b8%99%e0%b8%b2%e0%b8%99%e0%b8%a7%e0%b8%b4%e0%b8%8d%e0%b8%8d%e0%b8%b2%e0%b8%93/</link>
@@ -955,15 +972,6 @@
       <enclosure url="https://mcdn.podbean.com/mf/web/9ykvyz/TP60.mp3" length="15733834" type="audio/mpeg"/>
       <itunes:author>Mission To Pluto Media</itunes:author>
       <itunes:duration>18:43</itunes:duration>
-    </item>
-    <item>
-      <title>The Last Duel เสียงของผู้หญิงกับ "ความจริงที่ไร้ค่า" ในสังคมชายเป็นใหญ่ | Show Time EP.63</title>
-      <link>https://missiontopluto.podbean.com/e/the-last-duel-show-time-ep63/</link>
-      <pubDate>Sat, 13 Nov 2021 18:01:57 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/5b5cadf6-20dd-3132-84ff-a4fb36a6a719</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/7f8hbm/ST63.mp3" length="24970576" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>29:43</itunes:duration>
     </item>
   </channel>
 </rss>
