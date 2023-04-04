@@ -6,7 +6,7 @@
     <atom:link href="https://feed.podbean.com/missiontopluto/feed.xml" rel="self" type="application/rss+xml"/>
     <link>https://missiontopluto.podbean.com</link>
     <description>"เพราะทุกความสงสัยทำให้เกิดการเรียนรู้" ร่วมกันเปิดกล่องแพนโดรา ไขปริศนาจักรวาล เรียนรู้ผ่านเรื่องราวที่สนุกและมีสาระ ณ มุมมืดของสุดขอบกาแล็กซี กับ Mission To Pluto Mystery Club by Mission To The Moon Media</description>
-    <pubDate>Tue, 21 Mar 2023 18:00:00 +0700</pubDate>
+    <pubDate>Tue, 04 Apr 2023 18:00:00 +0700</pubDate>
     <generator>https://podbean.com/?v=5.5</generator>
     <language>th</language>
     <spotify:countryOfOrigin>th</spotify:countryOfOrigin>
@@ -28,6 +28,24 @@
       <width>144</width>
       <height>144</height>
     </image>
+    <item>
+      <title>ใคร-ใน-หุ่น? เปิดตำนานโรเบิร์ต ตุ๊กตาต้องคำสาป | Time To Play EP.128</title>
+      <link>https://missiontopluto.podbean.com/e/%e0%b9%83%e0%b8%84%e0%b8%a3-%e0%b9%83%e0%b8%99-%e0%b8%ab%e0%b8%b8%e0%b9%88%e0%b8%99-%e0%b9%80%e0%b8%9b%e0%b8%b4%e0%b8%94%e0%b8%95%e0%b8%b3%e0%b8%99/</link>
+      <pubDate>Mon, 03 Apr 2023 18:00:00 +0700</pubDate>
+      <guid isPermaLink="false">missiontopluto.podbean.com/7bb2949d-b262-31a2-99d7-8886f1bba503</guid>
+      <enclosure url="https://mcdn.podbean.com/mf/web/y8s83f/TP128_Ad_Forum9m6qw.mp3" length="13290544" type="audio/mpeg"/>
+      <itunes:author>Mission To Pluto Media</itunes:author>
+      <itunes:duration>15:49</itunes:duration>
+    </item>
+    <item>
+      <title>ลัทธิบูชาเทพต่างมิติ Daoloth โดย H.P. Lovecraft | Time To Play EP.127</title>
+      <link>https://missiontopluto.podbean.com/e/%e0%b8%a5%e0%b8%b1%e0%b8%97%e0%b8%98%e0%b8%b4%e0%b8%9a%e0%b8%b9%e0%b8%8a%e0%b8%b2%e0%b9%80%e0%b8%97%e0%b8%9e%e0%b8%95%e0%b9%88%e0%b8%b2/</link>
+      <pubDate>Mon, 27 Mar 2023 18:00:00 +0700</pubDate>
+      <guid isPermaLink="false">missiontopluto.podbean.com/ad362d5c-7525-345c-9956-6fd33f899d1f</guid>
+      <enclosure url="https://mcdn.podbean.com/mf/web/c73rep/TP127.mp3" length="23461936" type="audio/mpeg"/>
+      <itunes:author>Mission To Pluto Media</itunes:author>
+      <itunes:duration>27:55</itunes:duration>
+    </item>
     <item>
       <title>ทฤษฎีสมคบคิดมนุษย์กิ้งก่า รัฐบาลเงาผู้ครองโลก | Time To Play EP.126</title>
       <link>https://missiontopluto.podbean.com/e/%e0%b8%97%e0%b8%a4%e0%b8%a9%e0%b8%8e%e0%b8%b5%e0%b8%aa%e0%b8%a1%e0%b8%84%e0%b8%9a%e0%b8%84%e0%b8%b4%e0%b8%94%e0%b8%a1%e0%b8%99%e0%b8%b8/</link>
