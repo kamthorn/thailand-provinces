@@ -6,7 +6,7 @@
     <atom:link href="https://feed.podbean.com/missiontopluto/feed.xml" rel="self" type="application/rss+xml"/>
     <link>https://missiontopluto.podbean.com</link>
     <description>"เพราะทุกความสงสัยทำให้เกิดการเรียนรู้" ร่วมกันเปิดกล่องแพนโดรา ไขปริศนาจักรวาล เรียนรู้ผ่านเรื่องราวที่สนุกและมีสาระ ณ มุมมืดของสุดขอบกาแล็กซี กับ Mission To Pluto Mystery Club by Mission To The Moon Media</description>
-    <pubDate>Tue, 11 Apr 2023 18:00:00 +0700</pubDate>
+    <pubDate>Tue, 18 Apr 2023 18:00:00 +0700</pubDate>
     <generator>https://podbean.com/?v=5.5</generator>
     <language>th</language>
     <spotify:countryOfOrigin>th</spotify:countryOfOrigin>
@@ -28,6 +28,15 @@
       <width>144</width>
       <height>144</height>
     </image>
+    <item>
+      <title>"Dudleytown" เมืองต้องคำสาปที่สุดในโลก | Time To Play EP.130</title>
+      <link>https://missiontopluto.podbean.com/e/dudleytown-%e0%b9%80%e0%b8%a1%e0%b8%b7%e0%b8%ad%e0%b8%87%e0%b8%95%e0%b9%89%e0%b8%ad%e0%b8%87%e0%b8%84%e0%b8%b3%e0%b8%aa/</link>
+      <pubDate>Mon, 17 Apr 2023 18:00:00 +0700</pubDate>
+      <guid isPermaLink="false">missiontopluto.podbean.com/b3b76550-a5c9-388f-a7b6-0c84309e8d3b</guid>
+      <enclosure url="https://mcdn.podbean.com/mf/web/auqp2c/TTP130.mp3" length="16722784" type="audio/mpeg"/>
+      <itunes:author>Mission To Pluto Media</itunes:author>
+      <itunes:duration>19:54</itunes:duration>
+    </item>
     <item>
       <title>ทะเลสาบลึกลับ ต้นกำเนิดวิวรณ์แห่งกลากิ | Time To Play EP.129</title>
       <link>https://missiontopluto.podbean.com/e/%e0%b8%97%e0%b8%b0%e0%b9%80%e0%b8%a5%e0%b8%aa%e0%b8%b2%e0%b8%9a%e0%b8%a5%e0%b8%b6%e0%b8%81%e0%b8%a5%e0%b8%b1%e0%b8%9a-%e0%b8%95/</link>
@@ -990,15 +999,6 @@
       <enclosure url="https://mcdn.podbean.com/mf/web/3swes9/SJ60.mp3" length="20714464" type="audio/mpeg"/>
       <itunes:author>Mission To Pluto Media</itunes:author>
       <itunes:duration>24:39</itunes:duration>
-    </item>
-    <item>
-      <title>เปิดตำนานเหล่าทวยเทพต้นฉบับ Eternals | Time to Play EP.60</title>
-      <link>https://missiontopluto.podbean.com/e/eternals-time-to-play-ep60/</link>
-      <pubDate>Mon, 15 Nov 2021 18:00:00 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/5cd81674-297f-3dae-863c-9c6691ac805d</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/9ykvyz/TP60.mp3" length="15733834" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>18:43</itunes:duration>
     </item>
   </channel>
 </rss>
