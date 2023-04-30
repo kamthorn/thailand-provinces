@@ -6,7 +6,7 @@
     <atom:link href="https://feed.podbean.com/missiontopluto/feed.xml" rel="self" type="application/rss+xml"/>
     <link>https://missiontopluto.podbean.com</link>
     <description>"เพราะทุกความสงสัยทำให้เกิดการเรียนรู้" ร่วมกันเปิดกล่องแพนโดรา ไขปริศนาจักรวาล เรียนรู้ผ่านเรื่องราวที่สนุกและมีสาระ ณ มุมมืดของสุดขอบกาแล็กซี กับ Mission To Pluto Mystery Club by Mission To The Moon Media</description>
-    <pubDate>Tue, 18 Apr 2023 18:00:00 +0700</pubDate>
+    <pubDate>Tue, 25 Apr 2023 18:00:00 +0700</pubDate>
     <generator>https://podbean.com/?v=5.5</generator>
     <language>th</language>
     <spotify:countryOfOrigin>th</spotify:countryOfOrigin>
@@ -28,6 +28,15 @@
       <width>144</width>
       <height>144</height>
     </image>
+    <item>
+      <title>Y'golonac เทพแห่งความเสื่อมทราม ผู้บังคับมนุษย์ให้เป็นทาส | Time To Play EP.131</title>
+      <link>https://missiontopluto.podbean.com/e/y-golonac%e0%b9%80%e0%b8%97%e0%b8%9e%e0%b9%81%e0%b8%ab%e0%b9%88%e0%b8%87%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1%e0%b9%80%e0%b8%aa%e0%b8%b7%e0%b9%88/</link>
+      <pubDate>Mon, 24 Apr 2023 18:00:00 +0700</pubDate>
+      <guid isPermaLink="false">missiontopluto.podbean.com/7272d51f-35c1-3fc4-b41d-b59bad67aca6</guid>
+      <enclosure url="https://mcdn.podbean.com/mf/web/7mvztn/TP131.mp3" length="24910768" type="audio/mpeg"/>
+      <itunes:author>Mission To Pluto Media</itunes:author>
+      <itunes:duration>29:39</itunes:duration>
+    </item>
     <item>
       <title>"Dudleytown" เมืองต้องคำสาปที่สุดในโลก | Time To Play EP.130</title>
       <link>https://missiontopluto.podbean.com/e/dudleytown-%e0%b9%80%e0%b8%a1%e0%b8%b7%e0%b8%ad%e0%b8%87%e0%b8%95%e0%b9%89%e0%b8%ad%e0%b8%87%e0%b8%84%e0%b8%b3%e0%b8%aa/</link>
@@ -972,33 +981,6 @@
       <enclosure url="https://mcdn.podbean.com/mf/web/qx3qes/SJ61.mp3" length="13077520" type="audio/mpeg"/>
       <itunes:author>Mission To Pluto Media</itunes:author>
       <itunes:duration>15:33</itunes:duration>
-    </item>
-    <item>
-      <title>H.P. Lovecraft "Dunwich Horror" เรื่องสยองหมู่บ้านดันวิช | Time to Play EP.61 Special</title>
-      <link>https://missiontopluto.podbean.com/e/hplovecraft-dunwich-horror/</link>
-      <pubDate>Mon, 22 Nov 2021 18:00:00 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/ee422719-9913-3d1c-bf1c-8c2a1dce08c8</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/bnaxib/TP61.mp3" length="45827366" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>54:33</itunes:duration>
-    </item>
-    <item>
-      <title>The Green Knight เมื่อปลายทางไม่สำคัญ  เท่าระหว่างทางที่เดิน | Show Time EP.64</title>
-      <link>https://missiontopluto.podbean.com/e/the-greenknight-%e0%b9%80%e0%b8%a1%e0%b8%b7%e0%b9%88%e0%b8%ad%e0%b8%9b%e0%b8%a5%e0%b8%b2%e0%b8%a2%e0%b8%97%e0%b8%b2%e0%b8%87%e0%b9%84/</link>
-      <pubDate>Sat, 20 Nov 2021 18:00:00 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/e2fe7c80-5456-33ec-9563-f93ea22a9051</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/magpzk/ST64.mp3" length="30952048" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>36:50</itunes:duration>
-    </item>
-    <item>
-      <title>"โรเบิร์ต เอ็งเค่" นายประตูผู้หยุดทุกความเจ็บปวดในชีวิตด้วยความตาย | Sport Journey EP.60</title>
-      <link>https://missiontopluto.podbean.com/e/sport-journey-ep60-l/</link>
-      <pubDate>Wed, 17 Nov 2021 18:29:15 +0700</pubDate>
-      <guid isPermaLink="false">missiontopluto.podbean.com/801ab0c4-50e1-3537-92cc-98e62e1312e0</guid>
-      <enclosure url="https://mcdn.podbean.com/mf/web/3swes9/SJ60.mp3" length="20714464" type="audio/mpeg"/>
-      <itunes:author>Mission To Pluto Media</itunes:author>
-      <itunes:duration>24:39</itunes:duration>
     </item>
   </channel>
 </rss>
