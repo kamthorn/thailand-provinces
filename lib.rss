@@ -17,6 +17,76 @@
     <itunes:category text="TV &amp; Film"/>
     <itunes:explicit>no</itunes:explicit>
     <item>
+      <title>ไฮดี้ ตอน 7</title>
+      <itunes:author>Thai PBS Podcast</itunes:author>
+      <itunes:summary/>
+      <itunes:image href="https://www.thaipbspodcast.com/uploads/imgs/tracks/4908.jpg"/>
+      <enclosure type="audio/x-m4a" url="https://www.thaipbspodcast.com/uploads/tracks/32/dd90a3123b8194979d4839882eb696f5.mp3"/>
+      <pubDate>Mon, 11 Jun 2018 00:00:00 +0700</pubDate>
+      <itunes:duration>56:28</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>ไฮดี้ ตอน 6</title>
+      <itunes:author>Thai PBS Podcast</itunes:author>
+      <itunes:summary/>
+      <itunes:image href="https://www.thaipbspodcast.com/uploads/imgs/tracks/4907.jpg"/>
+      <enclosure type="audio/x-m4a" url="https://www.thaipbspodcast.com/uploads/tracks/32/0131f8d914d0acb3d246e61fc4354dc8.mp3"/>
+      <pubDate>Fri, 08 Jun 2018 00:00:00 +0700</pubDate>
+      <itunes:duration>54:47</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>ไฮดี้ ตอน 5</title>
+      <itunes:author>Thai PBS Podcast</itunes:author>
+      <itunes:summary/>
+      <itunes:image href="https://www.thaipbspodcast.com/uploads/imgs/tracks/4906.jpg"/>
+      <enclosure type="audio/x-m4a" url="https://www.thaipbspodcast.com/uploads/tracks/32/45a5a46c00978867ffcd66e2f07310bc.mp3"/>
+      <pubDate>Thu, 07 Jun 2018 00:00:00 +0700</pubDate>
+      <itunes:duration>53:44</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>ไฮดี้ ตอน 4</title>
+      <itunes:author>Thai PBS Podcast</itunes:author>
+      <itunes:summary/>
+      <itunes:image href="https://www.thaipbspodcast.com/uploads/imgs/tracks/4905.jpg"/>
+      <enclosure type="audio/x-m4a" url="https://www.thaipbspodcast.com/uploads/tracks/32/0e292ea640bd7f595d2a98663737077e.mp3"/>
+      <pubDate>Wed, 06 Jun 2018 00:00:00 +0700</pubDate>
+      <itunes:duration>55:10</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>ไฮดี้ ตอน 3</title>
+      <itunes:author>Thai PBS Podcast</itunes:author>
+      <itunes:summary/>
+      <itunes:image href="https://www.thaipbspodcast.com/uploads/imgs/tracks/4904.jpg"/>
+      <enclosure type="audio/x-m4a" url="https://www.thaipbspodcast.com/uploads/tracks/32/40bcb2bbd56c09f1cd9bf72572b6bb34.mp3"/>
+      <pubDate>Tue, 05 Jun 2018 00:00:00 +0700</pubDate>
+      <itunes:duration>52:53</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>ไฮดี้ ตอน 2</title>
+      <itunes:author>Thai PBS Podcast</itunes:author>
+      <itunes:summary/>
+      <itunes:image href="https://www.thaipbspodcast.com/uploads/imgs/tracks/4903.jpg"/>
+      <enclosure type="audio/x-m4a" url="https://www.thaipbspodcast.com/uploads/tracks/32/daf17cba886b27682f8748888c023930.mp3"/>
+      <pubDate>Mon, 04 Jun 2018 00:00:00 +0700</pubDate>
+      <itunes:duration>54:41</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>ไฮดี้ ตอน 1</title>
+      <itunes:author>Thai PBS Podcast</itunes:author>
+      <itunes:summary/>
+      <itunes:image href="https://www.thaipbspodcast.com/uploads/imgs/tracks/4902.jpg"/>
+      <enclosure type="audio/x-m4a" url="https://www.thaipbspodcast.com/uploads/tracks/32/85c981e6b0110d5cdb305fbcb0719b06.mp3"/>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 +0700</pubDate>
+      <itunes:duration>53:35</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
       <title>โบนี่ มาร์ติน (เกือบจะ) โชคร้ายที่เกิดมารวย ตอนจบ</title>
       <itunes:author>Thai PBS Podcast</itunes:author>
       <itunes:summary/>
