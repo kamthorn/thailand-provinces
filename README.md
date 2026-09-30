@@ -41,8 +41,25 @@ v2 เป็นตารางแบบ array (ลดขนาด) ดูชื�
 ### ออฟไลน์ (service worker)
 หน้าตัวอย่างลงทะเบียน `sw.js` (ต้องเป็น https หรือ localhost): หน้า/ไลบรารีใช้ network-first แล้วถอยไปแคช, ข้อมูล `v2/` ใช้แคชทันทีแล้วอัปเดตเบื้องหลัง เมื่อเปลี่ยนกลยุทธ์หรือรายการไฟล์ให้แก้ `VERSION` ใน `sw.js`
 
+## นำเข้าฐานข้อมูล (`db/`)
+
+| ไฟล์ | เนื้อหา |
+|---|---|
+| `db/provinces.csv` | `code, name_th, name_en, legacy_id` (77 แถว) |
+| `db/districts.csv` | `code, province_code, name_th, name_en, legacy_id` (928 แถว) |
+| `db/subdistricts.csv` | `code, district_code, province_code, name_th, name_en, postal_code` (7,436 แถว) |
+| `db/thai_address.csv` | ตารางเดียวแบบ flat ระดับตำบล (มีชื่อ/รหัสของอำเภอและจังหวัดครบ) |
+| `db/schema.sql` | `CREATE TABLE th_provinces / th_districts / th_subdistricts` พร้อม FK และ index |
+| `db/data.sql` | `INSERT` ทั้งหมด (ครอบด้วย transaction) |
+
+- CSV เป็น UTF-8 ไม่มี BOM (เปิดใน Excel แล้วภาษาไทยเพี้ยน ให้ import แบบเลือก UTF-8)
+- `postal_code` เป็น `CHAR(5)` ส่วน `code` เป็นรหัสทางการของกรมการปกครอง (`PP`, `PPDD`, `PPDDSS`) ใช้เป็น foreign key ในระบบของคุณได้เลย
+- โหลด: `psql -f db/schema.sql -f db/data.sql`, `sqlite3 app.db < db/schema.sql && sqlite3 app.db < db/data.sql`, MySQL 8 สร้าง DB เป็น `utf8mb4` ก่อน แล้ว `mysql db < db/schema.sql` และ `< db/data.sql`
+- ทดสอบโหลดจริงใน SQLite (นับแถว, FK, ลำดับชั้น) ใน CI; PostgreSQL/MySQL เขียนเป็น ANSI SQL แต่ยังไม่ได้ทดสอบกับเซิร์ฟเวอร์จริง
+- ไฟล์ทั้งหมดสร้างจาก `python3 scripts/build_v2.py` (พร้อม `v2/`)
+
 ## ทดสอบ
-`node --test tests/thai-address.test.js`
+`node --test tests/thai-address.test.js` และ `python3 -m unittest discover tests`
 
 ## เกี่ยวกับ thai-break-dict-extra
 `data/proper-names/{provinces,districts,subdistricts}.txt` ใน [thai-break-dict-extra](https://github.com/kamthorn/thai-break-dict-extra) เป็นรายชื่อล้วน (ไม่มีลำดับชั้น/zip) เหมาะเป็นพจนานุกรมตัดคำ ไม่ใช่ตัวข้อมูลหลักของฟอร์ม
