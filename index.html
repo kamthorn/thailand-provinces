@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thailand Provinces — ตัวอย่างการป้อนที่อยู่</title>
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --fg:#1c2330; --mute:#6b7585; --line:#d9dee6; --accent:#1a5fd0; --ok:#1b7f4b; --warn:#b26a00; --bad:#b3261e; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#12161c; --card:#1a2029; --fg:#e8ecf2; --mute:#98a3b3; --line:#2f3a48; --accent:#6ea2ff; --ok:#56c98a; --warn:#e5a94a; --bad:#ff8a80; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.5 system-ui,"Noto Sans Thai",sans-serif; }
+  main { max-width:860px; margin:0 auto; padding:20px 16px 48px; }
+  h1 { font-size:1.4rem; margin:0 0 4px; }
+  h2 { font-size:1.05rem; margin:0 0 12px; }
+  p.lead { color:var(--mute); margin:0 0 16px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px; margin-bottom:16px; }
+  label { display:block; font-size:.85rem; color:var(--mute); margin:0 0 4px; }
+  select,input,textarea { width:100%; font:inherit; color:var(--fg); background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:9px 10px; }
+  select:disabled { opacity:.55; }
+  :is(select,input,textarea,button):focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
+  .grid { display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
+  .status { font-size:.85rem; padding:6px 10px; border-radius:8px; border:1px solid var(--line); margin-bottom:16px; }
+  .status.ok { color:var(--ok); } .status.warn { color:var(--warn); } .status.bad { color:var(--bad); }
+  .suggest { position:relative; }
+  .suggest ul { position:absolute; z-index:5; left:0; right:0; margin:2px 0 0; padding:0; list-style:none; background:var(--card); border:1px solid var(--line); border-radius:8px; max-height:260px; overflow:auto; box-shadow:0 6px 18px rgba(0,0,0,.15); }
+  .suggest li { padding:8px 10px; cursor:pointer; border-bottom:1px solid var(--line); }
+  .suggest li:last-child { border:0; }
+  .suggest li[aria-selected=true], .suggest li:hover { background:color-mix(in srgb, var(--accent) 16%, transparent); }
+  button { font:inherit; padding:8px 14px; border-radius:8px; border:1px solid var(--accent); background:var(--accent); color:#fff; cursor:pointer; }
+  button.ghost { background:transparent; color:var(--accent); }
+  pre { margin:12px 0 0; padding:10px; background:var(--bg); border:1px solid var(--line); border-radius:8px; overflow:auto; font-size:.8rem; }
+  .row { display:flex; gap:8px; margin-top:8px; flex-wrap:wrap; align-items:center; }
+  .cand { margin:8px 0 0; padding:0; list-style:none; }
+  .cand li { padding:6px 0; border-bottom:1px dashed var(--line); display:flex; justify-content:space-between; gap:8px; }
+  code { background:var(--bg); padding:1px 5px; border-radius:4px; }
+  .mute { color:var(--mute); font-size:.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>ป้อนที่อยู่ไทยแบบง่าย</h1>
+  <p class="lead">จังหวัด → อำเภอ/เขต → ตำบล/แขวง + รหัสไปรษณีย์ ข้อมูลทางการ 77 จังหวัด 928 อำเภอ/เขต 7,436 ตำบล/แขวง โหลดครั้งเดียว (~116 KB gzip) เก็บแคชในเครื่อง ใช้ต่อได้แม้เน็ตหลุด</p>
+
+  <div id="status" class="status" role="status">กำลังโหลดข้อมูล…</div>
+
+  <section class="card">
+    <h2>1) ค้นหาช่องเดียว (พิมพ์ตำบล, อำเภอ, จังหวัด หรือรหัสไปรษณีย์)</h2>
+    <div class="suggest">
+      <label for="q">เช่น “สีลม”, “บางรัก กทม”, “50200”, “silom”, “โคราช”</label>
+      <input id="q" type="search" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="qlist" aria-autocomplete="list" disabled>
+      <ul id="qlist" role="listbox" hidden></ul>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>2) เลือกทีละขั้น</h2>
+    <div class="grid">
+      <div><label for="sel-p">จังหวัด</label><select id="sel-p" disabled><option value="">— เลือกจังหวัด —</option></select></div>
+      <div><label for="sel-d" id="lbl-d">อำเภอ/เขต</label><select id="sel-d" disabled><option value="">— เลือก —</option></select></div>
+      <div><label for="sel-s" id="lbl-s">ตำบล/แขวง</label><select id="sel-s" disabled><option value="">— เลือก —</option></select></div>
+      <div><label for="zip">รหัสไปรษณีย์</label><input id="zip" inputmode="numeric" maxlength="5" placeholder="กรอกเองก็ได้" disabled></div>
+    </div>
+    <div class="mute" id="zip-hint" style="margin-top:8px"></div>
+  </section>
+
+  <section class="card">
+    <h2>3) วางที่อยู่ทั้งบรรทัดให้ช่วยแยก</h2>
+    <label for="paste">ตัวอย่างที่อยู่</label>
+    <textarea id="paste" rows="2" disabled>99/1 ม.5 ต.บางรัก อ.บางรัก กทม 10500</textarea>
+    <div class="row"><button id="parse" disabled>แยกที่อยู่</button>
+      <button class="ghost" data-ex="55 หมู่ 3 ตำบลสุเทพ อำเภอเมืองเชียงใหม่ จังหวัดเชียงใหม่ 50200">ตัวอย่าง: เชียงใหม่</button>
+      <button class="ghost" data-ex="123 ถ.สุขุมวิท แขวงคลองเตย เขตคลองเตย กรุงเทพฯ 10110">ตัวอย่าง: คลองเตย</button></div>
+    <ul id="cands" class="cand"></ul>
+  </section>
+
+  <section class="card">
+    <h2>ผลลัพธ์ที่เลือก</h2>
+    <pre id="out">{ }</pre>
+  </section>
+
+  <section class="card">
+    <h2>ใช้ในโปรเจคต์ของคุณ</h2>
+    <pre>&lt;script src="https://s.digest.in.th/thai-address.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  const db = await ThaiAddress.load({ baseUrl: 'https://s.digest.in.th/v2/' });
+  db.districts(10);            // เขตในกรุงเทพฯ
+  db.search('สีลม');            // ค้นหา
+  db.parse('… ต.บางรัก อ.บางรัก 10500');
+&lt;/script&gt;</pre>
+    <p class="mute">รูปแบบเดิมยังใช้ได้: <a href="provinces.json">provinces.json</a>, <code>amphur/{id}.json</code> ·
+      รูปแบบใหม่: <a href="v2/address.json">v2/address.json</a> (ทั้งประเทศ), <a href="v2/provinces.json">v2/provinces.json</a>, <code>v2/province/{code}.json</code></p>
+  </section>
+</main>
+
+<script src="thai-address.js"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var db, st = $('status');
+
+  function setStatus(cls, text) { st.className = 'status ' + cls; st.textContent = text; }
+  function opts(el, list, label) {
+    el.innerHTML = '';
+    var o = document.createElement('option'); o.value = ''; o.textContent = label; el.appendChild(o);
+    list.forEach(function (x) { var op = document.createElement('option'); op.value = x.code; op.textContent = x.th; el.appendChild(op); });
+    el.disabled = !list.length;
+  }
+  function show(a) {
+    $('out').textContent = JSON.stringify(a ? {
+      province: a.province.th, district: a.district.th, subdistrict: a.subdistrict.th, zip: a.zip,
+      codes: { province: a.province.code, district: a.district.code, subdistrict: a.subdistrict.code },
+      text: a.text
+    } : {}, null, 2);
+  }
+
+  // ---- fill everything from one full address (used by search + parse) ----
+  function pick(a) {
+    $('sel-p').value = a.province.code; onProvince(true).then(function () {
+      $('sel-d').value = a.district.code; onDistrict(true);
+      $('sel-s').value = a.subdistrict.code; onSubdistrict();
+    });
+  }
+
+  function onProvince(keep) {
+    var pc = Number($('sel-p').value);
+    var L = db.labels(pc || 0);
+    $('lbl-d').textContent = L.district; $('lbl-s').textContent = L.subdistrict;
+    opts($('sel-s'), [], '— เลือก —'); if (!keep) $('zip').value = '';
+    if (!pc) { opts($('sel-d'), [], '— เลือก —'); return Promise.resolve(); }
+    return db.ensureProvince(pc).then(function () { opts($('sel-d'), db.districts(pc), '— เลือก' + L.district + ' —'); })
+      .catch(function () { setStatus('bad', 'โหลดข้อมูลจังหวัดนี้ไม่สำเร็จ ลองเลือกใหม่อีกครั้ง'); });
+  }
+  function onDistrict(keep) {
+    var dc = Number($('sel-d').value), L = db.labels(Math.floor(dc / 100) || 0);
+    opts($('sel-s'), dc ? db.subdistricts(dc) : [], '— เลือก' + L.subdistrict + ' —');
+    if (!keep) $('zip').value = '';
+    if (dc) { var zs = uniq(db.subdistricts(dc).map(function (s) { return s.zip; })); $('zip-hint').textContent = zs.length === 1 ? 'รหัสไปรษณีย์ของพื้นที่นี้: ' + zs[0] : 'รหัสไปรษณีย์ในพื้นที่นี้: ' + zs.join(', '); }
+    else $('zip-hint').textContent = '';
+  }
+  function onSubdistrict() {
+    var sc = Number($('sel-s').value); if (!sc) return;
+    var a = db.address(sc); $('zip').value = a.zip; show(a);
+  }
+  function uniq(a) { return a.filter(function (x, i) { return a.indexOf(x) === i; }); }
+
+  // ---- autocomplete ----
+  var qi = $('q'), ql = $('qlist'), active = -1, results = [];
+  function renderList() {
+    ql.innerHTML = '';
+    results.forEach(function (a, i) {
+      var li = document.createElement('li'); li.setAttribute('role', 'option'); li.textContent = a.short;
+      li.setAttribute('aria-selected', i === active ? 'true' : 'false');
+      li.addEventListener('mousedown', function (e) { e.preventDefault(); choose(a); });
+      ql.appendChild(li);
+    });
+    ql.hidden = !results.length; qi.setAttribute('aria-expanded', String(!!results.length));
+  }
+  function choose(a) { qi.value = a.short; results = []; renderList(); pick(a); show(a); }
+  qi.addEventListener('input', function () { results = db.search(qi.value, { limit: 8 }); active = -1; renderList(); });
+  qi.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowDown') { active = Math.min(active + 1, results.length - 1); renderList(); e.preventDefault(); }
+    else if (e.key === 'ArrowUp') { active = Math.max(active - 1, 0); renderList(); e.preventDefault(); }
+    else if (e.key === 'Enter' && results[Math.max(active, 0)]) { choose(results[Math.max(active, 0)]); e.preventDefault(); }
+    else if (e.key === 'Escape') { results = []; renderList(); }
+  });
+  qi.addEventListener('blur', function () { setTimeout(function () { results = []; renderList(); }, 100); });
+
+  // ---- zip typed by hand ----
+  $('zip').addEventListener('input', function () {
+    var z = $('zip').value.replace(/\D/g, ''); $('zip').value = z;
+    if (z.length !== 5) return;
+    var hits = db.byZip(z);
+    $('zip-hint').textContent = hits.length ? 'พบ ' + hits.length + ' ตำบล/แขวง ในรหัสนี้ — พิมพ์ค้นหาช่องบนเพื่อเลือก' : 'ไม่พบรหัสไปรษณีย์นี้';
+    if (hits.length === 1) pick(hits[0]);
+    else if (hits.length) { qi.value = z; results = hits.slice(0, 8); renderList(); }
+  });
+
+  // ---- paste parser ----
+  function doParse() {
+    var r = db.parse($('paste').value), ul = $('cands'); ul.innerHTML = '';
+    if (!r.candidates.length) { ul.innerHTML = '<li class="mute">ไม่พบที่อยู่ที่ตรงกัน</li>'; return; }
+    if (r.best) { pick(r.best); show(r.best); }
+    r.candidates.forEach(function (a, i) {
+      var li = document.createElement('li'), b = document.createElement('button');
+      li.innerHTML = '<span></span>'; li.firstChild.textContent = (i === 0 && r.best ? '✓ ' : '') + a.short;
+      b.className = 'ghost'; b.textContent = 'ใช้อันนี้'; b.onclick = function () { pick(a); show(a); };
+      li.appendChild(b); ul.appendChild(li);
+    });
+    if (!r.best) { var m = document.createElement('li'); m.className = 'mute'; m.textContent = 'ไม่แน่ใจ กรุณาเลือกจากรายการ'; ul.insertBefore(m, ul.firstChild); }
+  }
+  $('parse').onclick = doParse;
+  document.querySelectorAll('[data-ex]').forEach(function (b) { b.onclick = function () { $('paste').value = b.dataset.ex; doParse(); }; });
+
+  // ---- boot ----
+  ThaiAddress.load({
+    baseUrl: './v2/',
+    onStatus: function (s) {
+      if (s.state === 'cache') setStatus('ok', 'ใช้ข้อมูลที่แคชไว้ในเครื่อง (กำลังตรวจอัปเดตเบื้องหลัง)');
+      else if (s.state === 'network') setStatus('ok', 'โหลดข้อมูลครบทั้งประเทศแล้ว');
+      else if (s.state === 'fallback') setStatus('warn', 'โหลดไฟล์รวมไม่สำเร็จ ใช้โหมดโหลดทีละจังหวัดแทน (ค้นหาข้ามจังหวัดยังไม่พร้อม)');
+      else if (s.state === 'error') setStatus('bad', 'โหลดข้อมูลไม่สำเร็จ กรุณาตรวจสอบอินเทอร์เน็ตแล้วรีเฟรช');
+    },
+    onUpdate: function (nd) { db = nd; }
+  }).then(function (d) {
+    db = d;
+    ['q', 'sel-p', 'zip', 'paste', 'parse'].forEach(function (id) { $(id).disabled = false; });
+    opts($('sel-p'), db.provinces(), '— เลือกจังหวัด —');
+    $('sel-p').addEventListener('change', function () { onProvince(false); });
+    $('sel-d').addEventListener('change', function () { onDistrict(false); });
+    $('sel-s').addEventListener('change', onSubdistrict);
+  }).catch(function () {});
+})();
+</script>
+</body>
+</html>
