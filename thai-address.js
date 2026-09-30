@@ -2,7 +2,7 @@
  * thai-address.js — Thai address helper (province > district > subdistrict + postal code)
  * Zero dependencies, works in browsers and Node 18+. Data: ./v2/ (see scripts/build_v2.py).
  *
- *   const db = await ThaiAddress.load({ baseUrl: 'https://s.digest.in.th/v2/' });
+ *   const db = await ThaiAddress.load({ baseUrl: 'https://kamthorn.github.io/thailand-provinces/v2/' });
  *   db.provinces();                 // [{code, th, en, legacy}]
  *   db.districts(10);               // districts of Bangkok
  *   db.subdistricts(1003);          // subdistricts (with zip)
