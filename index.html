@@ -193,6 +193,9 @@
   $('parse').onclick = doParse;
   document.querySelectorAll('[data-ex]').forEach(function (b) { b.onclick = function () { $('paste').value = b.dataset.ex; doParse(); }; });
 
+  // ---- offline support (needs https or localhost) ----
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(function () {});
+
   // ---- boot ----
   ThaiAddress.load({
     baseUrl: './v2/',

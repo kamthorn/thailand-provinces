@@ -38,6 +38,9 @@ v2 เป็นตารางแบบ array (ลดขนาด) ดูชื�
 - timeout + retry แบบ exponential backoff (`timeout`, `retries`, `backoff`)
 - ถ้าไฟล์รวมโหลดไม่ได้ จะถอยไปโหมดโหลดทีละจังหวัด (`onStatus` แจ้ง `fallback`, เรียก `await db.ensureProvince(code)` ก่อนใช้ `districts()`; โหมดนี้ `search()` ค้นได้เฉพาะจังหวัดที่โหลดแล้ว)
 
+### ออฟไลน์ (service worker)
+หน้าตัวอย่างลงทะเบียน `sw.js` (ต้องเป็น https หรือ localhost): หน้า/ไลบรารีใช้ network-first แล้วถอยไปแคช, ข้อมูล `v2/` ใช้แคชทันทีแล้วอัปเดตเบื้องหลัง เมื่อเปลี่ยนกลยุทธ์หรือรายการไฟล์ให้แก้ `VERSION` ใน `sw.js`
+
 ## ทดสอบ
 `node --test tests/thai-address.test.js`
 
