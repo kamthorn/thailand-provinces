@@ -34,6 +34,7 @@
   .row { display:flex; gap:8px; margin-top:8px; flex-wrap:wrap; align-items:center; }
   .cand { margin:8px 0 0; padding:0; list-style:none; }
   .cand li { padding:6px 0; border-bottom:1px dashed var(--line); display:flex; justify-content:space-between; gap:8px; }
+  .dl { margin:0; padding-left:1.2em; } .dl li { margin:4px 0; } .dl a { margin-right:2px; }
   code { background:var(--bg); padding:1px 5px; border-radius:4px; }
   .mute { color:var(--mute); font-size:.85rem; }
 </style>
@@ -78,6 +79,26 @@
   <section class="card">
     <h2>ผลลัพธ์ที่เลือก</h2>
     <pre id="out">{ }</pre>
+  </section>
+
+  <section class="card" id="download">
+    <h2>ดาวน์โหลดข้อมูล</h2>
+    <p class="mute" style="margin-top:0">สำหรับนำเข้าฐานข้อมูลของคุณ รหัสเป็นรหัสทางการ (จังหวัด/อำเภอ/ตำบล) ใช้เชื่อมกับตารางอื่นได้ ·
+      ดูทั้งโฟลเดอร์บน GitHub: <a href="https://github.com/kamthorn/thailand-provinces/tree/master/db">db/</a> ·
+      <a href="https://github.com/kamthorn/thailand-provinces/tree/master/v2">v2/</a> (JSON)</p>
+    <ul class="dl">
+      <li><b>CSV</b>
+        <a href="db/provinces.csv" download>provinces.csv</a> (77) ·
+        <a href="db/districts.csv" download>districts.csv</a> (928) ·
+        <a href="db/subdistricts.csv" download>subdistricts.csv</a> (7,436) ·
+        <a href="db/thai_address.csv" download>thai_address.csv</a> (flat)</li>
+      <li><b>SQL</b>
+        <a href="db/schema.sql" download>schema.sql</a> ·
+        <a href="db/data.sql" download>data.sql</a></li>
+      <li><b>JSON</b>
+        <a href="v2/address.json" download>address.json</a> (ทั้งประเทศ) ·
+        <a href="v2/provinces.json" download>provinces.json</a></li>
+    </ul>
   </section>
 
   <section class="card">

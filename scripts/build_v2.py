@@ -10,6 +10,11 @@ Outputs (all under v2/):
   province/{code}.json  one province with nested districts + subdistricts (lazy mode)
   meta.json             version, counts, content hash
 
+and relational exports for databases (under db/):
+  provinces.csv, districts.csv, subdistricts.csv, thai_address.csv (flat)
+  schema.sql            CREATE TABLE (ANSI; works on PostgreSQL / MySQL / SQLite)
+  data.sql              INSERT statements (multi-row, wrapped in a transaction)
+
 The legacy files (provinces.json, amphur/*.json) are NOT touched. Each v2
 province/district carries a `legacy` id so old consumers can migrate.
 
@@ -18,6 +23,7 @@ Usage:
 """
 
 import argparse
+import csv
 import hashlib
 import json
 import urllib.request
@@ -25,6 +31,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "v2"
+DB = ROOT / "db"
 UPSTREAM = "https://raw.githubusercontent.com/thailand-geography-data/thailand-geography-json/main/src/"
 BANGKOK = 10
 
@@ -54,6 +61,90 @@ def legacy_maps():
             name = v["t"][3:] if v["t"].startswith("เขต") else v["t"]
             dist[(int(pid), name)] = int(aid)
     return by_name, dist
+
+
+def sql_str(s: str) -> str:
+    return "'" + s.replace("'", "''") + "'"
+
+
+def write_csv(path: Path, header, rows):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8", newline="") as f:   # plain UTF-8, no BOM
+        w = csv.writer(f, lineterminator="\n")
+        w.writerow(header)
+        w.writerows(rows)
+
+
+SCHEMA = """-- thailand-provinces: relational schema (ANSI SQL; PostgreSQL / MySQL 8 / SQLite)
+-- Codes are official (PP / PPDD / PPDDSS). legacy_id = id used by the old provinces.json / amphur/*.json.
+-- MySQL: create the database with utf8mb4 (CREATE DATABASE x CHARACTER SET utf8mb4).
+
+CREATE TABLE th_provinces (
+  code        INTEGER      NOT NULL PRIMARY KEY,
+  name_th     VARCHAR(100) NOT NULL,
+  name_en     VARCHAR(100) NOT NULL,
+  legacy_id   INTEGER      NOT NULL
+);
+
+CREATE TABLE th_districts (
+  code          INTEGER      NOT NULL PRIMARY KEY,
+  province_code INTEGER      NOT NULL REFERENCES th_provinces (code),
+  name_th       VARCHAR(100) NOT NULL,
+  name_en       VARCHAR(100) NOT NULL,
+  legacy_id     INTEGER      NOT NULL
+);
+
+CREATE TABLE th_subdistricts (
+  code          INTEGER      NOT NULL PRIMARY KEY,
+  district_code INTEGER      NOT NULL REFERENCES th_districts (code),
+  province_code INTEGER      NOT NULL REFERENCES th_provinces (code),
+  name_th       VARCHAR(100) NOT NULL,
+  name_en       VARCHAR(100) NOT NULL,
+  postal_code   CHAR(5)      NOT NULL
+);
+
+CREATE INDEX idx_th_districts_province    ON th_districts (province_code);
+CREATE INDEX idx_th_subdistricts_district ON th_subdistricts (district_code);
+CREATE INDEX idx_th_subdistricts_postal   ON th_subdistricts (postal_code);
+"""
+
+
+def write_sql(prov_rows, dist_rows, sub_rows):
+    DB.mkdir(parents=True, exist_ok=True)
+    (DB / "schema.sql").write_text(SCHEMA, encoding="utf-8", newline="\n")
+
+    def inserts(table, cols, rows, size=500):
+        out = []
+        for i in range(0, len(rows), size):
+            vals = ",\n".join("  (" + ", ".join(r) + ")" for r in rows[i:i + size])
+            out.append(f"INSERT INTO {table} ({', '.join(cols)}) VALUES\n{vals};\n")
+        return "".join(out)
+
+    lines = ["-- thailand-provinces data. Load db/schema.sql first.\nBEGIN;\n\n"]
+    lines.append(inserts("th_provinces", ["code", "name_th", "name_en", "legacy_id"],
+                         [[str(c), sql_str(th), sql_str(en), str(lg)] for c, th, en, lg in prov_rows]))
+    lines.append("\n" + inserts("th_districts", ["code", "province_code", "name_th", "name_en", "legacy_id"],
+                                [[str(c), str(c // 100), sql_str(th), sql_str(en), str(lg)] for c, th, en, lg in dist_rows]))
+    lines.append("\n" + inserts("th_subdistricts", ["code", "district_code", "province_code", "name_th", "name_en", "postal_code"],
+                                [[str(c), str(c // 100), str(c // 10000), sql_str(th), sql_str(en), sql_str(f"{z:05d}")]
+                                 for c, th, en, z in sub_rows]))
+    lines.append("\nCOMMIT;\n")
+    (DB / "data.sql").write_text("".join(lines), encoding="utf-8", newline="\n")
+
+
+def write_db_exports(prov_rows, dist_rows, sub_rows):
+    write_csv(DB / "provinces.csv", ["code", "name_th", "name_en", "legacy_id"], prov_rows)
+    write_csv(DB / "districts.csv", ["code", "province_code", "name_th", "name_en", "legacy_id"],
+              [[c, c // 100, th, en, lg] for c, th, en, lg in dist_rows])
+    write_csv(DB / "subdistricts.csv", ["code", "district_code", "province_code", "name_th", "name_en", "postal_code"],
+              [[c, c // 100, c // 10000, th, en, f"{z:05d}"] for c, th, en, z in sub_rows])
+    pth = {r[0]: r[1:3] for r in prov_rows}
+    dth = {r[0]: r[1:3] for r in dist_rows}
+    write_csv(DB / "thai_address.csv",
+              ["subdistrict_code", "subdistrict_th", "subdistrict_en", "district_code", "district_th", "district_en",
+               "province_code", "province_th", "province_en", "postal_code"],
+              [[c, th, en, c // 100, *dth[c // 100], c // 10000, *pth[c // 10000], f"{z:05d}"] for c, th, en, z in sub_rows])
+    write_sql(prov_rows, dist_rows, sub_rows)
 
 
 def main():
@@ -110,6 +201,8 @@ def main():
         dump(OUT / "province" / f"{pr[0]}.json", {
             "v": 2, "hash": digest, "cols": bundle["cols"], "p": [pr], "d": ds, "s": ss,
         })
+
+    write_db_exports(prov_rows, dist_rows, sub_rows)
 
     dump(OUT / "meta.json", {
         "v": 2, "hash": digest,
