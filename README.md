@@ -43,6 +43,9 @@ v2 เป็นตารางแบบ array (ลดขนาด) ดูชื�
 
 ## นำเข้าฐานข้อมูล (`db/`)
 
+ดาวน์โหลด: เปิดโฟลเดอร์ [`db/`](db/) บน repo หรือโหลดจากหน้าเว็บ https://kamthorn.github.io/thailand-provinces/#download
+(ไฟล์ตรงๆ เช่น `https://kamthorn.github.io/thailand-provinces/db/thai_address.csv`)
+
 | ไฟล์ | เนื้อหา |
 |---|---|
 | `db/provinces.csv` | `code, name_th, name_en, legacy_id` (77 แถว) |
