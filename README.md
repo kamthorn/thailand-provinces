@@ -1,37 +1,50 @@
-## Welcome to GitHub Pages
+# thailand-provinces
 
-You can use the [editor on GitHub](https://github.com/kamthorn/thailand-provinces/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+รายชื่อจังหวัด / อำเภอ(เขต) / ตำบล(แขวง) + รหัสไปรษณีย์ของไทย เป็น static JSON พร้อมไลบรารีเล็กๆ (`thai-address.js`, ไม่มี dependency) สำหรับทำฟอร์มป้อนที่อยู่
+หน้าหลัก ([index.html](index.html)) เป็นตัวอย่างใช้งาน: ค้นหาช่องเดียว, เลือกทีละขั้น, วางที่อยู่ทั้งบรรทัดให้แยกให้
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## ข้อมูล
 
-### Markdown
+| รูปแบบ | ไฟล์ | หมายเหตุ |
+|---|---|---|
+| **v2 (แนะนำ)** | `v2/address.json` | ทั้งประเทศในไฟล์เดียว ~438 KB (~116 KB gzip) มีรหัสทางการ + ตำบล + zip |
+| | `v2/provinces.json` | จังหวัดอย่างเดียว ~4 KB |
+| | `v2/province/{code}.json` | 1 จังหวัด พร้อมอำเภอและตำบล ≤ ~17 KB (โหมดสำรองเมื่อเน็ตช้า) |
+| | `v2/meta.json` | เวอร์ชัน/จำนวน/hash |
+| **เดิม (legacy)** | `provinces.json`, `amphur/{id}.json` | **ไม่เปลี่ยนแปลง** ใช้ต่อได้เหมือนเดิม |
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+v2 เป็นตารางแบบ array (ลดขนาด) ดูชื่อคอลัมน์ใน `cols` รหัสเป็นรหัสทางการ (`PP`, `PPDD`, `PPDDSS`) จึงหา parent ได้ด้วย `code / 100`
+แต่ละจังหวัด/อำเภอมีฟิลด์ `legacy` = id ในไฟล์เดิม เพื่อ migrate ง่าย (ตรวจแล้วตรงครบ 77 จังหวัด, 928 อำเภอ/เขต)
 
-```markdown
-Syntax highlighted code block
+สร้างใหม่: `python3 scripts/build_v2.py` (ดึงจาก [thailand-geography-json](https://github.com/thailand-geography-data/thailand-geography-json), MIT)
 
-# Header 1
-## Header 2
-### Header 3
+## ใช้ใน browser
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```html
+<script src="thai-address.js"></script>
+<script>
+  const db = await ThaiAddress.load({ baseUrl: './v2/' });
+  db.provinces();            // [{code, th, en, legacy}]
+  db.districts(10);          // เขตของ กทม.   (db.labels(10) -> เขต/แขวง)
+  db.subdistricts(1004);     // แขวงของเขตบางรัก (มี zip)
+  db.search('สีลม กทม');     // ชื่อ/ชื่ออังกฤษ/ชื่อย่อ/ชื่อเล่น (โคราช, อยุธยา)/รหัสไปรษณีย์
+  db.byZip(10500);
+  db.parse('99/1 ม.5 ต.บางรัก อ.บางรัก กทม 10500'); // {best, candidates}
+</script>
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### รับมือเน็ตช้า/หลุด
+- แคชใน `localStorage` แล้วอัปเดตเบื้องหลัง (stale-while-revalidate) — เปิดครั้งที่สองไม่ต้องรอเน็ต
+- timeout + retry แบบ exponential backoff (`timeout`, `retries`, `backoff`)
+- ถ้าไฟล์รวมโหลดไม่ได้ จะถอยไปโหมดโหลดทีละจังหวัด (`onStatus` แจ้ง `fallback`, เรียก `await db.ensureProvince(code)` ก่อนใช้ `districts()`; โหมดนี้ `search()` ค้นได้เฉพาะจังหวัดที่โหลดแล้ว)
 
-### Jekyll Themes
+### ออฟไลน์ (service worker)
+หน้าตัวอย่างลงทะเบียน `sw.js` (ต้องเป็น https หรือ localhost): หน้า/ไลบรารีใช้ network-first แล้วถอยไปแคช, ข้อมูล `v2/` ใช้แคชทันทีแล้วอัปเดตเบื้องหลัง เมื่อเปลี่ยนกลยุทธ์หรือรายการไฟล์ให้แก้ `VERSION` ใน `sw.js`
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kamthorn/thailand-provinces/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## ทดสอบ
+`node --test tests/thai-address.test.js`
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## เกี่ยวกับ thai-break-dict-extra
+`data/proper-names/{provinces,districts,subdistricts}.txt` ใน [thai-break-dict-extra](https://github.com/kamthorn/thai-break-dict-extra) เป็นรายชื่อล้วน (ไม่มีลำดับชั้น/zip) เหมาะเป็นพจนานุกรมตัดคำ ไม่ใช่ตัวข้อมูลหลักของฟอร์ม
+โปรเจคต์นี้ใช้แนวเดียวกัน (ชื่อเรียกย่อ กรุงเทพฯ/อยุธยา/โคราช และตัวย่อ จ. อ. ต.) ใน `db.search/parse` โดยไม่ต้องพึ่ง tokenizer
+ถ้าต้องการตัดคำที่อยู่ยาวๆ ที่ไม่มีเครื่องหมายคั่น ให้ใช้ thai-break + words-extra ตัดคำก่อน แล้วส่งแต่ละคำเข้า `db.search`
